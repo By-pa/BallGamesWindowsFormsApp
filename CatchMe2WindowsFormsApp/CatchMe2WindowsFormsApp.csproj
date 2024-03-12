@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{60BA32AB-66B0-418A-B3C4-AA8A65DC365A}</ProjectGuid>
+    <ProjectGuid>{8F980280-9137-4FD1-8717-F5470C8EAEA3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>BallGamesWindowsFormsApp</RootNamespace>
-    <AssemblyName>BallGamesWindowsFormsApp</AssemblyName>
+    <RootNamespace>CatchMe2WindowsFormsApp</RootNamespace>
+    <AssemblyName>CatchMe2WindowsFormsApp</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
