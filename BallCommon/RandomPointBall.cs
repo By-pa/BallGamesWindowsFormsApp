@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Windows.Forms;
 
-namespace BallGamesWindowsFormsApp
+namespace BallCommon
 {
 	public class RandomPointBall : Ball
 	{
 		protected static Random random = new Random();
-		public RandomPointBall(MainForm form): base(form) 
+		public RandomPointBall(Form form): base(form) 
 		{
 			x = random.Next(0, form.ClientSize.Width);
 			y = random.Next(0, form.ClientSize.Height);
