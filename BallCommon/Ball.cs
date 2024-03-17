@@ -8,27 +8,46 @@ namespace BallCommon
 	public class Ball
 	{
 		private Form form;
+		private Timer timer;
 
 		protected int vx = 5;
 		protected int vy = -5;
 
-		protected int x = 150;
-		protected int y = 150;
-		
-		protected int size = 50;
+		protected int centerX = 10;
+		protected int centerY = 10;
+
+		protected int radius = 25;
 		protected static Random Random = new Random();
 
 		public Ball(Form form)
 		{
 			this.form = form;
+			timer = new Timer();
+			timer.Interval = 20;
+			timer.Tick += Timer_Tick;
+		}
+		public bool IsMovable()
+		{
+			return timer.Enabled;
 		}
 
+
+		public void Start()
+		{
+			timer.Start();
+		}
+		public void Stop()
+		{
+			timer.Stop();
+		}
+		private void Timer_Tick(object sender, EventArgs e)
+		{
+			Move();
+		}
 		public void Show()
 		{
-			var graphiscs = form.CreateGraphics();
 			var brush = Brushes.Red;
-			var rectangle = new Rectangle(x, y, size, size);
-			graphiscs.FillEllipse(brush, rectangle);
+			Draw(brush);
 		}
 		public void Move()
 		{
@@ -37,31 +56,62 @@ namespace BallCommon
 			Show();
 		}
 
+		public  bool Exists(int pointX, int pointY)
+		{
+			var dx = pointX - centerX;
+			var dy = pointY - centerY;
+			return dx * dx + dy* dy <= radius * radius;
+		}
+
+		public int LeftSide()
+		{
+			return radius;
+		}
+		public int RigthSide()
+		{
+			return form.ClientSize.Width - radius;
+		}
+		public int TopSide()
+		{
+			return radius;
+		}
+		public int DownSide()
+		{
+			return form.ClientSize.Height - radius;
+		}
+
+
+
 		public bool OnForm()
 		{
-			return x >= 0 && y >= 0 && x + size <= form.ClientSize.Width && y + size <= form.ClientSize.Height;			
+			return centerX >= LeftSide() && centerY >= TopSide() && centerX <= RigthSide() && centerY <= DownSide();			
 		}
 
 		public bool Contains(int pointX, int pointY)
 		{
-			var radius = size / 2;
-			var centerX = x + radius;
-			var centerY = y + radius;
-			return (centerX - pointX) * (centerX - pointX) + (centerY - pointY) * (centerY - pointY) <= radius * radius;
+			var rad = radius / 2;
+			var centX = centerX + radius;
+			var centY = centerY + radius;
+			return (centX - pointX) * (centX - pointX) + (centY - pointY) * (centY - pointY) <= rad * rad;
 		}
 
-		private void Go()
+		protected virtual void Go()
 		{
-			x += vx;
-			y += vy;
+			centerX += vx;
+			centerY += vy;
 		}
 		public void Clear()
 		{
-			var graphiscs = form.CreateGraphics();
 			var brush = new SolidBrush(form.BackColor);
-			var rectangle = new Rectangle(x, y, size, size);
+			Draw(brush);
+		}
+
+		private void Draw(Brush brush)
+		{
+			var graphiscs = form.CreateGraphics();
+			var rectangle = new Rectangle(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
 			graphiscs.FillEllipse(brush, rectangle);
 		}
-		
+
 	}
 }

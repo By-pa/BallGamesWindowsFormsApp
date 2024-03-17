@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatchMe2WindowsFormsApp", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BallCommon", "BallCommon\BallCommon.csproj", "{93C8E091-0E95-4FF1-8DA7-F3D773548DB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillyardWindowsFormsApp", "BillyardWindowsFormsApp\BillyardWindowsFormsApp.csproj", "{4401648C-7EB5-4D9B-8144-79E8181F802C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{93C8E091-0E95-4FF1-8DA7-F3D773548DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93C8E091-0E95-4FF1-8DA7-F3D773548DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93C8E091-0E95-4FF1-8DA7-F3D773548DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4401648C-7EB5-4D9B-8144-79E8181F802C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4401648C-7EB5-4D9B-8144-79E8181F802C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4401648C-7EB5-4D9B-8144-79E8181F802C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4401648C-7EB5-4D9B-8144-79E8181F802C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
