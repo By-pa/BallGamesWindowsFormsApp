@@ -8,9 +8,9 @@ namespace BallCommon
 		static Random random = new Random();
 		public PointBall(Form form, int x, int y): base(form)
 		{
-			size = 1000;
-			this.x = x - this.x / 2;
-			this.y = y - this.y / 2;
+			radius = 1000;
+			this.centerX = x - this.centerX / 2;
+			this.centerY = y - this.centerY / 2;
 			
 		}
 	}

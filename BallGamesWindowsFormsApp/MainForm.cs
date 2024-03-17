@@ -30,7 +30,7 @@ namespace BallGamesWindowsFormsApp
 
 			stopButton.Enabled = true;
 			startButton.Enabled = false;
-			for (int i = 0; i < 2; i++)
+			for (int i = 0; i < 5; i++)
 			{
 				var moveBall = new MoveBall(this);
 				moveBalls.Add(moveBall);

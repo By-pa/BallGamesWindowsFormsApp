@@ -8,7 +8,7 @@ namespace CatchMe2WindowsFormsApp
 {
 	public partial class MainForm : Form
 	{
-		private List<RandomMoveBall> moveBalls;
+		private List<Ball> balls;
 
 		private int countBalls = 0;
 		public MainForm()
@@ -20,12 +20,13 @@ namespace CatchMe2WindowsFormsApp
 		{
 			startButton.Enabled = false;
 			clearButton.Enabled = true;
+			balls = new List<Ball>();
 
-			moveBalls = new List<RandomMoveBall>();
+
 			for (int i = 0; i < 10; i++)
 			{
 				var moveBall = new RandomMoveBall(this);
-				moveBalls.Add(moveBall);
+				balls.Add(moveBall);
 				moveBall.Start();
 			}
 		}
@@ -38,9 +39,9 @@ namespace CatchMe2WindowsFormsApp
 
 		private void MainForm_MouseDown(object sender, MouseEventArgs e)
 		{
-			if (moveBalls != null)
+			if (balls != null)
 			{
-				foreach (var moveBall in moveBalls)
+				foreach (var moveBall in balls)
 				{
 					if (moveBall.IsMovable() && moveBall.Contains(e.X, e.Y))
 					{
@@ -54,7 +55,7 @@ namespace CatchMe2WindowsFormsApp
 
 		private void clearButton_Click(object sender, EventArgs e)
 		{
-			foreach (var moveBall in moveBalls)
+			foreach (var moveBall in balls)
 			{
 				moveBall.Clear();
 			}
