@@ -16,7 +16,7 @@ namespace BillyardWindowsFormsApp
 			centerY = random.Next(TopSide(), DownSide());
 			this.brush = brush;
 			vx = random.Next(-10, 11);
-			vy = random.Next(0, 0);
+			vy = random.Next(-10, 11);
 
 		}
 
@@ -34,21 +34,25 @@ namespace BillyardWindowsFormsApp
 
 			if (centerX <= LeftSide())
 			{
+				centerX = LeftSide();
 				vx = -vx;
 				OnHited.Invoke(this, new HitEventArgs(Side.Left));
 			}
 			if (centerX >= RigthSide())
 			{
+				centerX = RigthSide();
 				vx = -vx;
 				OnHited.Invoke(this, new HitEventArgs(Side.Right));
 			}
 			if (centerY <= TopSide())
 			{
+				centerY = TopSide();
 				vy = -vy;
 				OnHited.Invoke(this, new HitEventArgs(Side.Top));
 			}
 			if (centerY >= DownSide())
 			{
+				centerY = DownSide();
 				vy = -vy;
 				OnHited.Invoke(this, new HitEventArgs(Side.Bottom));
 			}
