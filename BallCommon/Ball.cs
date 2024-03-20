@@ -7,7 +7,7 @@ namespace BallCommon
 {
 	public class Ball
 	{
-		private Form form;
+		protected Form form;
 		private Timer timer;
 
 		protected int vx = 5;
@@ -15,9 +15,9 @@ namespace BallCommon
 
 		protected int centerX = 10;
 		protected int centerY = 10;
-
+		protected Brush brush = Brushes.Blue;
 		protected int radius = 25;
-		protected static Random Random = new Random();
+		protected static Random random = new Random();
 
 		public Ball(Form form)
 		{
@@ -25,6 +25,20 @@ namespace BallCommon
 			timer = new Timer();
 			timer.Interval = 20;
 			timer.Tick += Timer_Tick;
+		}
+
+		public Ball(Form form, Brush brush)
+		{
+			this.form = form;
+			this.brush = brush;
+			timer = new Timer();
+			timer.Interval = 20;
+			timer.Tick += Timer_Tick;
+		}
+
+		public Brush GetBrush()
+		{
+			return brush;
 		}
 		public bool IsMovable()
 		{
@@ -46,7 +60,7 @@ namespace BallCommon
 		}
 		public void Show()
 		{
-			var brush = Brushes.Red;
+
 			Draw(brush);
 		}
 		public void Move()

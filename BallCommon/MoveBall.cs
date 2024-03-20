@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 
 namespace BallCommon
@@ -6,7 +7,7 @@ namespace BallCommon
 	public class MoveBall : RandomPointBall
 	{
 		
-		public MoveBall(Form form) : base(form) 
+		public MoveBall(Form form, Brush brush) : base(form, brush) 
 		{
 			vx = GenerateRandomProjection();
 			vy = GenerateRandomProjection();
