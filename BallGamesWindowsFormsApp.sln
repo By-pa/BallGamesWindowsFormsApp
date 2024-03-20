@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BallCommon", "BallCommon\Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillyardWindowsFormsApp", "BillyardWindowsFormsApp\BillyardWindowsFormsApp.csproj", "{4401648C-7EB5-4D9B-8144-79E8181F802C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiffusionWindowsFormsApp", "DiffusionWindowsFormsApp\DiffusionWindowsFormsApp.csproj", "{9F6A8E39-C4BF-44D1-91B4-0DA3E484187A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4401648C-7EB5-4D9B-8144-79E8181F802C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4401648C-7EB5-4D9B-8144-79E8181F802C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4401648C-7EB5-4D9B-8144-79E8181F802C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6A8E39-C4BF-44D1-91B4-0DA3E484187A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6A8E39-C4BF-44D1-91B4-0DA3E484187A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6A8E39-C4BF-44D1-91B4-0DA3E484187A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6A8E39-C4BF-44D1-91B4-0DA3E484187A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
