@@ -50,6 +50,7 @@
     <Compile Include="RandomMoveBall.cs" />
     <Compile Include="RandomPointBall.cs" />
     <Compile Include="RandomSizeAndPointBall.cs" />
+    <Compile Include="TopReachedEventArgs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

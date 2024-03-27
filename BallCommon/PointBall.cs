@@ -5,7 +5,6 @@ namespace BallCommon
 {
 	public class PointBall : Ball
 	{
-		static Random random = new Random();
 		public PointBall(Form form, int x, int y): base(form)
 		{
 			radius = 1000;

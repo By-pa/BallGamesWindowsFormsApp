@@ -7,7 +7,7 @@ namespace BallCommon
 	public class MoveBall : RandomPointBall
 	{
 		
-		public MoveBall(Form form, Brush brush) : base(form, brush) 
+		public MoveBall(Form form) : base(form) 
 		{
 			vx = GenerateRandomProjection();
 			vy = GenerateRandomProjection();

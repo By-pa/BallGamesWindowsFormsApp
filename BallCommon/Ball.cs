@@ -10,11 +10,11 @@ namespace BallCommon
 		protected Form form;
 		private Timer timer;
 
-		protected int vx = 5;
-		protected int vy = -5;
+		protected float vx = 5;
+		protected float vy = -5;
 
-		protected int centerX = 10;
-		protected int centerY = 10;
+		protected float centerX = 10;
+		protected float centerY = 10;
 		protected Brush brush = Brushes.Blue;
 		protected int radius = 25;
 		protected static Random random = new Random();
@@ -123,7 +123,7 @@ namespace BallCommon
 		private void Draw(Brush brush)
 		{
 			var graphiscs = form.CreateGraphics();
-			var rectangle = new Rectangle(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
+			var rectangle = new RectangleF(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
 			graphiscs.FillEllipse(brush, rectangle);
 		}
 
