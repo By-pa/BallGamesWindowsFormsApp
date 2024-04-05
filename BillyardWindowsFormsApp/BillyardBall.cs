@@ -21,7 +21,7 @@ namespace BillyardWindowsFormsApp
 				vx = -vx;
 				OnHited.Invoke(this, new HitEventArgs(Side.Left));
 			}
-			if (centerX >= RigthSide())
+			if (centerX >= RightSide())
 			{
 				vx = -vx;
 				OnHited.Invoke(this, new HitEventArgs(Side.Right));

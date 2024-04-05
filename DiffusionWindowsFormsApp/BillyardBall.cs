@@ -12,7 +12,7 @@ namespace BillyardWindowsFormsApp
 		public BillyardBall(Form form, Brush brush) : base(form, brush)
 		{
 			radius = 10;
-			centerX = random.Next(LeftSide(), RigthSide());
+			centerX = random.Next(LeftSide(), RightSide());
 			centerY = random.Next(TopSide(), DownSide());
 			this.brush = brush;
 			vx = random.Next(-10, 11);
@@ -38,9 +38,9 @@ namespace BillyardWindowsFormsApp
 				vx = -vx;
 				OnHited.Invoke(this, new HitEventArgs(Side.Left));
 			}
-			if (centerX >= RigthSide())
+			if (centerX >= RightSide())
 			{
-				centerX = RigthSide();
+				centerX = RightSide();
 				vx = -vx;
 				OnHited.Invoke(this, new HitEventArgs(Side.Right));
 			}

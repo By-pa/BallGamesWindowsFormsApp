@@ -15,7 +15,7 @@ namespace BallCommon
 
 		protected float centerX = 10;
 		protected float centerY = 10;
-		protected Brush brush = Brushes.Blue;
+		protected Brush brush = Brushes.Orange;
 		protected int radius = 25;
 		protected static Random random = new Random();
 
@@ -35,7 +35,12 @@ namespace BallCommon
 			timer.Interval = 20;
 			timer.Tick += Timer_Tick;
 		}
-
+		public bool Intersect(Ball other)
+		{ 
+			var dx = centerX - other.centerX;
+			var dy = centerY - other.centerY;
+			return dx * dx + dy * dy <= (radius + other.radius) * (radius + other.radius);
+		}
 		public Brush GetBrush()
 		{
 			return brush;
@@ -81,7 +86,7 @@ namespace BallCommon
 		{
 			return radius;
 		}
-		public int RigthSide()
+		public int RightSide()
 		{
 			return form.ClientSize.Width - radius;
 		}
@@ -98,7 +103,7 @@ namespace BallCommon
 
 		public bool OnForm()
 		{
-			return centerX >= LeftSide() && centerY >= TopSide() && centerX <= RigthSide() && centerY <= DownSide();			
+			return centerX >= LeftSide() && centerY >= TopSide() && centerX <= RightSide() && centerY <= DownSide();			
 		}
 
 		public bool Contains(int pointX, int pointY)
