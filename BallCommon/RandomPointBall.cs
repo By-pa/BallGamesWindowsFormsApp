@@ -8,7 +8,7 @@ namespace BallCommon
 	{
 		public RandomPointBall(Form form) : base(form)
 		{
-			centerX = random.Next(LeftSide(), RigthSide());
+			centerX = random.Next(LeftSide(), RightSide());
 			centerY = random.Next(TopSide(), DownSide());
 		}
 	}
