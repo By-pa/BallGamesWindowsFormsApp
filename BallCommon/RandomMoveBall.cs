@@ -7,8 +7,8 @@ namespace BallCommon
 	{
 		public RandomMoveBall(Form form) : base(form) 
 		{
-			vx = random.Next(-5, 6);
-			vy = random.Next(-5, 6);
+			vx = (float)random.NextDouble() * 10 - 5;
+			vy = (float)random.NextDouble() * 10 - 5;
 		}
 	}
 }
